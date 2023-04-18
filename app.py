@@ -3,9 +3,11 @@ from sqlalchemy import create_engine, text
 import os
 
 
-user = "7pg8tk59nvec1c3nrqwn"
-password = "pscale_pw_BzcZd6vhlUrpGFgOxOr2viYmD3rA9l7dfA1WIzSm7et"
-engine = create_engine(f"mysql+pymysql://{user}:{password}@aws.connect.psdb.cloud/hello?charset=utf8mb4",connect_args={
+user = "v6c2cnij34cx9hsvkrcb"
+password = "pscale_pw_ohNxHwY6MdHZc1Fa80LDe8YsTiOsvpDPxCVRKdC49z9"
+
+connect_string = f"mysql+pymysql://{user}:{password}@aws.connect.psdb.cloud/hello?charset=utf8mb4"
+engine = create_engine(connect_string,connect_args={
     "ssl": {
       "ssl_ca": "/etc/ssl/cert.pem"
     }
