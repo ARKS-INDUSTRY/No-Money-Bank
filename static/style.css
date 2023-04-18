@@ -108,7 +108,7 @@ button{
 }
 
 .card{
-    width: 80vh;
+    width: fit-content;
     margin:25px;
     box-shadow: 1px 12px 13px 2px grey;
     padding: 25px;
