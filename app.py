@@ -15,7 +15,7 @@ with engine.connect() as conn:
       data = list()
       for i in result.all():
            data.append(i)
-print(data)
+
 app = Flask(__name__)
 
 
