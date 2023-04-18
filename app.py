@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 import os
 
 
-connect_string = os.environ['connection']
+connect_string = os.environ.get('connection')
 engine = create_engine(connect_string,connect_args={
     "ssl": {
       "ssl_ca": "/etc/ssl/cert.pem"
