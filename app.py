@@ -1,10 +1,10 @@
 from flask import *
 from sqlalchemy import create_engine, text
-
+import os
 
 host = "aws.connect.psdb.cloud"
-user = "sb1b2rhkoonftkgqe33l"
-password = "pscale_pw_Jj1Yy5bB7TnI4IaEzxXxUx1ogvtln8fHrgujfwaKXNb"
+user = os.environ["user"]
+password = os.environ["password"]
 engine = create_engine(f"mysql+pymysql://{user}:{password}@aws.connect.psdb.cloud/hello?charset=utf8mb4",connect_args={
     "ssl": {
       "ssl_ca": "/etc/ssl/cert.pem"
