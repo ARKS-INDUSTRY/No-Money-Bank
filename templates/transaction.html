@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <title>No Money Bank</title>
+</head>
+<body>
+    <header>
+        <h1>No Money Bank</h1>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Accounts</a></li>
+            <li><a href="/transaction/">Transactions</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Account Number</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in datas %}
+          <tr>
+            <td>{{data[1]}}</td>
+            <td>{{data[0]}}</td>
+            <td>&#8377 {{data[2]}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <footer>
+        <div class="contacts" id="Contact">
+            <form>
+                <input type="email" placeholder="Your email address">
+                <textarea placeholder="Your message" cols="30" rows="10"></textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+      <p class="copy">&copy; 2023 Bank Website</p>
+    </footer>
+</body>
+</html>
