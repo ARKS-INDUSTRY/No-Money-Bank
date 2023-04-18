@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 import os
 
 host = "aws.connect.psdb.cloud"
-user = os.environ["user"]
+user = os.environ.get("user")
 password = os.environ["password"]
 engine = create_engine(f"mysql+pymysql://{user}:{password}@aws.connect.psdb.cloud/hello?charset=utf8mb4",connect_args={
     "ssl": {
